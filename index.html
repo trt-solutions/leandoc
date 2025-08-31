@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #1a1a1a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: #242424;
+            padding: 2rem 1.5rem;
+            border-right: 1px solid #333;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .search-container {
+            margin-bottom: 2rem;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 6px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .search-input::placeholder {
+            color: #555;
+        }
+
+        .nav-menu {
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #888;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover {
+            background: rgba(255,255,255,0.1);
+            color: #ffffff;
+        }
+
+        .nav-link.active {
+            background: rgba(255,255,255,0.1);
+            color: #ffffff;
+        }
+
+        /* Main content */
+        .main-content {
+            margin-left: 280px;
+            padding: 3rem 4rem;
+            width: calc(100% - 280px);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .intro {
+            color: #888;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+
+        .intro a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        /* Content grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .content-card {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: all 0.2s ease;
+        }
+
+        .content-card:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.12);
+        }
+
+        .content-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .content-card p {
+            color: #888;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+                padding: 2rem;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="search-container">
+                <input type="text" placeholder="Search" class="search-input">
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#general" class="nav-link">General</a></li>
+                <li><a href="#sites" class="nav-link">Sites</a></li>
+                <li><a href="#building" class="nav-link">Building</a></li>
+                <li><a href="#forms" class="nav-link">Forms</a></li>
+                <li><a href="#account" class="nav-link">Account</a></li>
+                <li><a href="#pro" class="nav-link active">Pro</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <h1>Documentation</h1>
+            <p class="intro">Welcome to the official documentation! We've tried to provide answers and instructions for the most common questions and tasks, but if you can't find what you're looking for here please <a href="#">get in touch</a>.</p>
+            
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>General</h3>
+                    <p>Basic information about the platform</p>
+                </div>
+                <div class="content-card">
+                    <h3>Sites</h3>
+                    <p>Managing and configuring sites</p>
+                </div>
+                <div class="content-card">
+                    <h3>Building</h3>
+                    <p>Working with the site builder</p>
+                </div>
+                <div class="content-card">
+                    <h3>Forms</h3>
+                    <p>Building and using form elements</p>
+                </div>
+                <div class="content-card">
+                    <h3>Account</h3>
+                    <p>Managing your account</p>
+                </div>
+                <div class="content-card">
+                    <h3>Pro</h3>
+                    <p>Upgrade your experience</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
